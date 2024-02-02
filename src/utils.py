@@ -1,10 +1,9 @@
 import logging
-from requests import RequestException
 
 from exceptions import ParserFindTagException
+from requests import RequestException
 
 
-# Перехват ошибки RequestException.
 def get_response(session, url):
     try:
         response = session.get(url)
